@@ -17,7 +17,6 @@ beforeEach(async () => {
     lottery = await new web3.eth.Contract(JSON.parse(interface))
       .deploy({
         data: bytecode,
-        arguments: [],
       })
       .send({
         from: accounts[0],

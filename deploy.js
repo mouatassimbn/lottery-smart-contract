@@ -18,7 +18,6 @@ const web3 = new Web3(provider);
     const result = await new web3.eth.Contract(JSON.parse(interface))
       .deploy({
         data: bytecode,
-        arguments: [],
       })
       .send({ gas: "100000", gasPrice: "5000000000", from: accounts[0] });
   
